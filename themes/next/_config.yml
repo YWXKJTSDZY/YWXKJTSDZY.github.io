@@ -386,7 +386,7 @@ font:
   posts:
     external: true
     family:
-    size: 20
+    size: 28
 
   # Font settings for Logo.
   # Fallback to `global` font settings.
