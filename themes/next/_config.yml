@@ -386,7 +386,7 @@ font:
   posts:
     external: true
     family:
-    size: 28
+    size: 32
 
   # Font settings for Logo.
   # Fallback to `global` font settings.
@@ -488,7 +488,7 @@ valine:
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
-youyan_uid: 2160515
+#youyan_uid: 2160515
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
