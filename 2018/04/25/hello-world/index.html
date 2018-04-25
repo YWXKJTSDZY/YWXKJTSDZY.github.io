@@ -5,19 +5,19 @@
   
 
   
-  <title>Hello World | Hexo</title>
+  <title>搭建流程 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="初次搭建 在github上创建yourname.github.io仓库 创建两个分支：master和hexo,并将hexo设置为默认分支 克隆仓库到本地：’’’git clone git@github.com:yourname/yourname.github.io.git’’’ 删除刚才克隆的仓库中的文件 cmd执行:’’’hexo init blog, npm install, npm inst">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
+<meta property="og:title" content="搭建流程">
 <meta property="og:url" content="http://yoursite.com/2018/04/25/hello-world/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="初次搭建 在github上创建yourname.github.io仓库 创建两个分支：master和hexo,并将hexo设置为默认分支 克隆仓库到本地：’’’git clone git@github.com:yourname/yourname.github.io.git’’’ 删除刚才克隆的仓库中的文件 cmd执行:’’’hexo init blog, npm install, npm inst">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-25T02:35:35.585Z">
+<meta property="og:updated_time" content="2018-04-25T02:55:05.003Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="搭建流程">
+<meta name="twitter:description" content="初次搭建 在github上创建yourname.github.io仓库 创建两个分支：master和hexo,并将hexo设置为默认分支 克隆仓库到本地：’’’git clone git@github.com:yourname/yourname.github.io.git’’’ 删除刚才克隆的仓库中的文件 cmd执行:’’’hexo init blog, npm install, npm inst">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      搭建流程
     </h1>
   
 
@@ -86,26 +86,42 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="初次搭建"><a href="#初次搭建" class="headerlink" title="初次搭建"></a>初次搭建</h1><ul>
+<li>在github上创建yourname.github.io仓库</li>
+<li>创建两个分支：master和hexo,并将hexo设置为默认分支</li>
+<li>克隆仓库到本地：’’’git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:yourname/yourname.github.io.git’’’</li>
+<li>删除刚才克隆的仓库中的文件</li>
+<li>cmd执行:’’’hexo init blog, npm install, npm install hexo-deployer-git –save’’’</li>
+<li>拷贝blog中的内容到yourname.github.io</li>
+<li>修改’’’_config.yml’’’中的部署参数</li>
+<li>将yourname.github.io中的内容上传到github：’’’git add ., git commit -m “1st commit”, git push origin hexo’’’</li>
+<li>执行’’’hexo g -d’’’生成网站并部署到github</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/hello-world/" data-id="cjgehrogi00002kqoz2nn6i2u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/hello-world/" data-id="cjgeieki60000kgqo0akbiuv0" class="article-share-link">Share</a>
       
       
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2018/04/25/自定义博客/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          搭建流程
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
 </article>
 
@@ -138,7 +154,11 @@
       <ul>
         
           <li>
-            <a href="/2018/04/25/hello-world/">Hello World</a>
+            <a href="/2018/04/25/自定义博客/">搭建流程</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/25/hello-world/">搭建流程</a>
           </li>
         
       </ul>
