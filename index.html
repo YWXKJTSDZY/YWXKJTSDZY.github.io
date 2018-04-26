@@ -335,6 +335,176 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/26/linear-classification/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="翟宇">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YWXKJTSD">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/26/linear-classification/" itemprop="url">线性分类器</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-26T21:39:42+08:00">2018-04-26</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CNN/" itemprop="url" rel="index"><span itemprop="name">CNN</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="提纲"><a href="#提纲" class="headerlink" title="提纲"></a>提纲</h2><ul>
+<li>线性分类介绍</li>
+<li>线性score函数</li>
+<li>理解线性分类器</li>
+<li>损失函数<ul>
+<li>多类SVM</li>
+<li>Softmax分类器</li>
+<li>SVM vs Softmax</li>
+</ul>
+</li>
+<li>总结</li>
+</ul>
+<h3 id="线性分类"><a href="#线性分类" class="headerlink" title="线性分类"></a>线性分类</h3><p>上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了<strong>K-最近邻</strong>分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），<strong>K-最近邻</strong>分类器有几个缺点：</p>
+<ul>
+<li>必须存储所有的训练数据，耗费存储空间。</li>
+<li>测试数据必须与所有的训练数据比较，预测时非常耗时。</li>
+</ul>
+<p>我们将发展出一套更强大的图片分类方法，通过这个方法我们可以很自然的引入<strong>神经网络和卷积神经网络</strong>。这个方法由两部分组成：score function和loss function，score function将原始数据映射为其属于某一类的分数，loss function定量的刻画所预测的分数与ground truth labels之间的一致性。最后我们会得到一个优化问题：找到一组描述score function的参数,最小化loss function。</p>
+<p>score function定义：假设$x_i \in R^D$为训练集中的图片，对应的label为$y_i$，其中$i = 1 \dots N$ and $y_i \in { 1 \dots K }$,也就是我们有N个训练样本，每个样本的维度为D,这些样本分别属于K个类别。CIFAR-10:N=50000,D=32x32x3=3072个像素,K=10。定义score函数$f: R^D \mapsto R^K$为：$$f(x_i, W, b) =  W x_i + b$$其中：$x_i$已经摊平为1列shape=[Dx1]，矩阵W（[KxD]）和矢量b([Kx1])为参数。对于CIFAR-10数据集：$x_i$([3072x1])中包含第i张图片的所有像素值，W:[10x3072],b:[10x1]，函数的输入为3072个像素值，输出为10个值，可以将这10个数理解为10个类别的评分。W和b分别称为weights和bias。注意几点：</p>
+<ul>
+<li>$W x_i$并行计算10个不同类别的分数，W的一行对应一个类别。</li>
+<li>我们希望找到一组W和b，使得在整个训练集上，对每一个$x_i$所计算的类别分数中，正确类别所得分数最高。</li>
+<li>我们通过训练集学到参数W和b以后，可以丢弃训练集只存储参数，当需要预测某张图片的类别时，利用上面的分数函数即可对图片的类别作出预测。</li>
+<li>与kNN分类器相比，虽然训练过程时间较长，但只要学习到参数，预测很快，而且训练完成后不再需要存储训练集。<blockquote>
+<p>卷积神经网络CNN也是这样一个将图片像素值映射到类别分数的函数，只不过这个函数要复杂得多。</p>
+</blockquote>
+</li>
+</ul>
+<p><a href="http://cs231n.github.io/" target="_blank" rel="noopener">本节参考</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/25/安装流程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -784,7 +954,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -801,7 +971,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -818,7 +990,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1037,6 +1211,10 @@
   
     
       
+        
+      
+    
+      
     
       
     
@@ -1044,6 +1222,29 @@
     
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
