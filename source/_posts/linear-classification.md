@@ -7,6 +7,8 @@ tags:
 categories: 
 - CNN
 ---
+![svm](linear-classification/svm.png)
+
 ## 提纲
 * 线性分类介绍
 * 线性score函数
@@ -17,7 +19,6 @@ categories:
 	* SVM vs Softmax
 * 总结
 
-![svm](linear-classification/svm.png)
 ### 线性分类
 上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了**K-最近邻**分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），**K-最近邻**分类器有几个缺点：
 
