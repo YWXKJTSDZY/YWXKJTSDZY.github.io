@@ -1,12 +1,14 @@
 ---
 title: 线性分类器
 date: 2018-04-26 21:39:42
+updated: 
 mathjax: true
 tags: 
 - CNN
 categories: 
 - CNN
 ---
+
 ![svm](linear-classification/svm.png)
 
 ## 提纲
