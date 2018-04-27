@@ -131,18 +131,20 @@
 
 
 
-  <meta name="description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结  线性分类上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了K-最近邻分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），K-最近邻">
+  <meta name="description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结  线性分类上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了K-最近邻分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），K-最近">
 <meta name="keywords" content="CNN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性分类器">
 <meta property="og:url" content="http://yoursite.com/2018/04/26/linear-classification/index.html">
 <meta property="og:site_name" content="YWXKJTSD">
-<meta property="og:description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结  线性分类上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了K-最近邻分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），K-最近邻">
+<meta property="og:description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结  线性分类上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了K-最近邻分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），K-最近">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-26T15:13:11.116Z">
+<meta property="og:image" content="http://yoursite.com/2018/04/26/linear-classification/svm.png">
+<meta property="og:updated_time" content="2018-04-27T03:14:34.230Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性分类器">
-<meta name="twitter:description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结  线性分类上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了K-最近邻分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），K-最近邻">
+<meta name="twitter:description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结  线性分类上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了K-最近邻分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），K-最近">
+<meta name="twitter:image" content="http://yoursite.com/2018/04/26/linear-classification/svm.png">
 
 
 
@@ -375,6 +377,16 @@
           </span>
 
           
+  <span class="post-updated">
+    &nbsp; | &nbsp; 更新于
+    <time itemprop="dateUpdated" datetime="2018-04-27T11:14:34+08:00" content="2018-04-27">
+      2018-04-27
+    </time>
+  </span>
+
+
+
+          
             <span class="post-category" >
             
               <span class="post-meta-divider">|</span>
@@ -420,7 +432,8 @@
       
 
       
-        <h2 id="提纲"><a href="#提纲" class="headerlink" title="提纲"></a>提纲</h2><ul>
+        <p><img src="/2018/04/26/linear-classification/svm.png" alt="svm"></p>
+<h2 id="提纲"><a href="#提纲" class="headerlink" title="提纲"></a>提纲</h2><ul>
 <li>线性分类介绍</li>
 <li>线性score函数</li>
 <li>理解线性分类器</li>
