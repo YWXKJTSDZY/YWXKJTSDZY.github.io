@@ -119,7 +119,7 @@ menu:
   tags: /tags/ || tags
   categories: /categories/ || th
   archives: /archives/ || archive
-  #something: /something/ || adjust
+  something: /something/ || adjust
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -493,7 +493,7 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+livere_uid: MTAyMC8zNjA4Ni8xMjYyMQ==
 
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
