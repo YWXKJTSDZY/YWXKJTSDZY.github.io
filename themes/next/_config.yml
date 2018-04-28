@@ -187,12 +187,12 @@ links_layout: block
 links:
   TensorFlow: http://www.tensorflow.org/
   NumPy: http://www.numpy.org/ 
-  
+
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-avatar: /images/avatar.gif
+avatar: /images/me.jpg
 
 # Table Of Contents in the Sidebar
 toc:
