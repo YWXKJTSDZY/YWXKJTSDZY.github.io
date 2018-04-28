@@ -131,20 +131,23 @@
 
 
 
-  <meta name="description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结  线性分类上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了K-最近邻分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），K-最近">
+  <meta name="description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结  线性分类上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了K-最近邻分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），K-最近邻">
 <meta name="keywords" content="CNN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性分类器">
 <meta property="og:url" content="http://yoursite.com/2018/04/26/linear-classification/index.html">
 <meta property="og:site_name" content="YWXKJTSD">
-<meta property="og:description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结  线性分类上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了K-最近邻分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），K-最近">
+<meta property="og:description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结  线性分类上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了K-最近邻分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），K-最近邻">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2018/04/26/linear-classification/svm.png">
-<meta property="og:updated_time" content="2018-04-28T03:21:43.252Z">
+<meta property="og:image" content="http://yoursite.com/2018/04/26/linear-classification/imagemap.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/04/26/linear-classification/pixelspace.jpeg">
+<meta property="og:image" content="http://yoursite.com/2018/04/26/linear-classification/templates.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/04/26/linear-classification/wb.jpeg">
+<meta property="og:updated_time" content="2018-04-28T15:41:34.744Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性分类器">
-<meta name="twitter:description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结  线性分类上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了K-最近邻分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），K-最近">
-<meta name="twitter:image" content="http://yoursite.com/2018/04/26/linear-classification/svm.png">
+<meta name="twitter:description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结  线性分类上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了K-最近邻分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），K-最近邻">
+<meta name="twitter:image" content="http://yoursite.com/2018/04/26/linear-classification/imagemap.jpg">
 
 
 
@@ -350,9 +353,9 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/26/linear-classification/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="翟宇">
+      <meta itemprop="name" content="YWXKJTSD">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/me.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -388,7 +391,7 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2018-04-28T11:21:43+08:00" content="2018-04-28">
+    <time itemprop="dateUpdated" datetime="2018-04-28T23:41:34+08:00" content="2018-04-28">
       2018-04-28
     </time>
   </span>
@@ -441,8 +444,7 @@
       
 
       
-        <p><img src="/2018/04/26/linear-classification/svm.png" alt="svm"></p>
-<h2 id="提纲"><a href="#提纲" class="headerlink" title="提纲"></a>提纲</h2><ul>
+        <h1 id="提纲"><a href="#提纲" class="headerlink" title="提纲"></a>提纲</h1><ul>
 <li>线性分类介绍</li>
 <li>线性score函数</li>
 <li>理解线性分类器</li>
@@ -454,7 +456,7 @@
 </li>
 <li>总结</li>
 </ul>
-<h3 id="线性分类"><a href="#线性分类" class="headerlink" title="线性分类"></a>线性分类</h3><p>上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了<strong>K-最近邻</strong>分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），<strong>K-最近邻</strong>分类器有几个缺点：</p>
+<h1 id="线性分类"><a href="#线性分类" class="headerlink" title="线性分类"></a>线性分类</h1><p>上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了<strong>K-最近邻</strong>分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），<strong>K-最近邻</strong>分类器有几个缺点：</p>
 <ul>
 <li>必须存储所有的训练数据，耗费存储空间。</li>
 <li>测试数据必须与所有的训练数据比较，预测时非常耗时。</li>
@@ -470,7 +472,28 @@
 </blockquote>
 </li>
 </ul>
+<h1 id="理解线性分类器"><a href="#理解线性分类器" class="headerlink" title="理解线性分类器"></a>理解线性分类器</h1><p>注意线性分类器计算类分数的方式：三个颜色通道的所有像素值的加权和。取决于权重的具体数值，线性分类器可以对图片中不同位置的某种颜色表现出一定的偏好（如果偏向某种颜色，则该颜色对应的权重会偏大）。比方说，如果图像的周围被大量的蓝色包围（对应水），那么有很大的可能性认为图像是船。那么这个区分船的线性分类器在蓝色通道上具有更大的权重，在红、绿色通道上具有较小的权重。</p>
+<p><img src="/2018/04/26/linear-classification/imagemap.jpg" alt="imagemap"></p>
+<p>上图是将图片映射到类分数的例子，为了方便可视化，假定图像只包含4个像素一个颜色通道，图像仅有三个类别。将图像像素值摊平为一列然后与权重矩阵做乘法运算，再加上bais项就得到权重分数。这里的权重参数矩阵W并没有选好，因为图片输入为猫，所计算出的猫类的分数却不是最高的。</p>
+<h2 id="将图像理解为高维空间中的点"><a href="#将图像理解为高维空间中的点" class="headerlink" title="将图像理解为高维空间中的点"></a>将图像理解为高维空间中的点</h2><p>由于将图像的像素值摊平为一个列向量，我们可以将图像理解为高维空间中的点。比如：CIFAR-10数据集中每张图片都为32x32x3的图像，摊平为列向量后为3072维向量，因此可以将这些图像理解为分布在3072维空间中的点集。想象一下如果我们可以可视化3072维空间，比如用二维空间去”表示“，那么分类器实际上用一条线将某一个类别同其他的类别区分开。</p>
+<p><img src="/2018/04/26/linear-classification/pixelspace.jpeg" alt="pixelspace"></p>
+<p>上面为图片空间的卡通描述，每一张图片表示一个点，可视化了3个类别。红线表示car classifier,红线箭头所指方向为car类别得正分的区域，距离红线越远分数越高。相反方向为得负分的区域，距离红线越远，分值越低。</p>
+<p>从上面可以看出，W的一行对应一个类别的分类器。从几何的角度来看，当改变权重时，在像素空间中的”线“（超平面）的方向将发生变化，bais参数b表示在该空间中的”线“的平移。如果没有bais项，所有的线都将通过原点。</p>
+<h2 id="将线性分类器理解为template-matching"><a href="#将线性分类器理解为template-matching" class="headerlink" title="将线性分类器理解为template matching"></a>将线性分类器理解为template matching</h2><p>可以将W的一行理解为一个类的template。将图片依次与这些template做比较（点积）即可得到一张图片每个类的分数，从而判断出图片所属的类别。这有点类似最近邻分类器，最近邻分类器是将待预测的图片与训练集中的所有图片做比较，找到与带比较图片最接近的图片，即可判断待预测图片所属类别。但是这里，待预测图片仅仅与一张图片作比较，这张图片由权重表示，是从训练集学习到的。</p>
+<p><img src="/2018/04/26/linear-classification/templates.jpg" alt="templates"></p>
+<p>上图为学习到的templates，注意到horse template似乎有两个头，这是因为训练集中的马，头的方向有左有右，线性分类器将这两种模式集成到一张template中去。同样的，car classifier似乎将多种模式集成到一个template中去，这个模板必须分辨不同方向不同颜色的车，这个模板最终是红色的车，表示训练集中红色车偏多，模板认为红颜色是车的可能性较大。线性分类器还是太弱，不能区分不同颜色的车。神经网络的隐藏层的神经元能够识别不同颜色，不同侧边，下一层神经元能够将这些组合起来，识别出具体的车型。</p>
+<p>将W与b集成到一个矩阵后，score function$f(x_i, W, b) =  W x_i + b$可以改写为$f(x_i, W) =  W x_i$这样的改写使得公式更加紧凑。改写方法如下图：</p>
+<p><img src="/2018/04/26/linear-classification/wb.jpeg" alt="wb"></p>
+<h1 id="图像数据的处理"><a href="#图像数据的处理" class="headerlink" title="图像数据的处理"></a>图像数据的处理</h1><p>像素值得取值范围为[0…255]，在机器学习中，经常要对输入特征进行normalization（对于图片来说，每一个像素值就是一个特征）。将数据的每一个特征减掉整个数据集该特征的平均值从而center the data，对于图像来说，这一步操作后像素值取值范围为[-127,127]。然后scale input feature，使得像素取值范围变为[-1,1]。以上两步骤中，dynamics of gradient descent要将特征<strong>零均值</strong>化，这是非常重要的.</p>
+<h1 id="Loss-function"><a href="#Loss-function" class="headerlink" title="Loss function"></a>Loss function</h1><p>前面定义的score function以W为参数，对一个固定的训练样本$(x_i,y_i)$，我们希望控制权重参数W，使得预测的类分数与其ground truth labels相一致。我们将定义一个量来衡量预测的类分数与其ground truth的不一致性，不一致性约小，那么预测的类分数与其ground truth label就越一致。</p>
+<h2 id="多类SVM-loss"><a href="#多类SVM-loss" class="headerlink" title="多类SVM loss"></a>多类SVM loss</h2><p>使用多类SVM loss，我们希望图片的正确类分数比不正确类分数还要高$\Delta$。$f(x_i, W)$是由类分数构成的矢量，简写为$s$则第$s$的第j个元素即为第j类的分数，表示为$s_j = f(x_i, W)_j$。第i个训练样本的Multiclass SVM loss可表示为：$$L_i = \sum_{j\neq y_i} \max(0, s_j - s_{y_i} + \Delta)$$举个例子，对于某一个训练样本$x_i$，假设得到的分数为$s = [13, -7, 11]$,$y_i = 0$为真正的类别，$\Delta=10$则该样本的多类SVM loss为：$$L_i = \max(0, -7 - 13 + 10) + \max(0, 11 - 13 + 10)$$可以看到第一项为0，第二项为8，所以这个样本的多类SVM loss为8.总而言之，多类SVM loss希望真实类的分数比不正确类的分数至少高$\Delta$,记住$f(x_i; W) =  W x_i$，其中W的第j行为$w_j^T$，所以多类SVM loss可以写为：$$L_i = \sum_{j\neq y_i} \max(0, w_j^T x_i - w_{y_i}^T x_i + \Delta)$$</p>
+<h2 id="Regularization"><a href="#Regularization" class="headerlink" title="Regularization"></a>Regularization</h2><p>regularization penalty$R(W) = \sum_k\sum_l W_{k,l}^2$，完整的多类SVM loss包括两个部分：data loss和regularization loss。$$L =  \underbrace{ \frac{1}{N} \sum_i L_i }_\text{data loss} + \underbrace{ \lambda R(W) }_\text{regularization loss}$$</p>
+<p>可以展开为：$$L = \frac{1}{N} \sum_i \sum_{j\neq y_i} \left[ \max(0, f(x_i; W)_j - f(x_i; W)_{y_i} + \Delta) \right] + \lambda \sum_k\sum_l W_{k,l}^2$$</p>
+<p>加入正则化项的意义：第一，因为缩放W会使loss变得任意大，所以要对W施加一限制,一种方法就是将W加入loss中，使得data loss小的同时，参数W也小。第二，降低个别特征的重要性，使得大部分特征都或多或少的起着作用。由于正则化项的存在，永远不可能使loss降为0.</p>
+<p>以下为loss function的python实现，包括矢量化和半矢量化两种版本：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">L_i</span><span class="params">(x, y, W)</span>:</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">没有矢量化的版本。</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">	delta = <span class="number">1.0</span></span><br><span class="line">	scores = W.dot(x)</span><br><span class="line">	correct_class_score = scores[y]</span><br><span class="line">	D = W.shape[<span class="number">0</span>]</span><br><span class="line">	loss_i = <span class="number">0.0</span></span><br><span class="line">	<span class="keyword">for</span> j <span class="keyword">in</span> range(D):</span><br><span class="line">		<span class="keyword">if</span> j == y:</span><br><span class="line">		<span class="keyword">continue</span></span><br><span class="line">		loss_i += np.max(<span class="number">0</span>, scores[j])</span><br><span class="line">	<span class="keyword">return</span> loss_i</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">L_i_vectorized</span><span class="params">(x, y, W)</span>:</span></span><br><span class="line">	<span class="string">"""</span></span><br><span class="line"><span class="string">	half-vectorized</span></span><br><span class="line"><span class="string">	"""</span></span><br><span class="line">	<span class="comment">#code here</span></span><br><span class="line">	<span class="keyword">return</span> loss_i</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">L</span><span class="params">(X, y, W)</span>:</span></span><br><span class="line">	<span class="string">"""</span></span><br><span class="line"><span class="string">	fully-vectorized implementation</span></span><br><span class="line"><span class="string">	"""</span></span><br><span class="line">	<span class="comment">#code here</span></span><br></pre></td></tr></table></figure>
 <p><a href="http://cs231n.github.io/" target="_blank" rel="noopener">本节参考</a></p>
+<p><span id="busuanzi_container_page_pv"><br>  本文总阅读量<span id="busuanzi_value_page_pv"></span>次<br></span></p>
 
       
     </div>
@@ -496,7 +519,7 @@
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="翟宇 支付宝"/>
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="YWXKJTSD 支付宝"/>
         <p>支付宝</p>
       </div>
     
@@ -605,10 +628,10 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/images/avatar.gif"
-                alt="翟宇" />
+                src="/images/me.jpg"
+                alt="YWXKJTSD" />
             
-              <p class="site-author-name" itemprop="name">翟宇</p>
+              <p class="site-author-name" itemprop="name">YWXKJTSD</p>
               <p class="site-description motion-element" itemprop="description">理想主义者是不可救药的：如果他被扔出了他的天堂，他会再制造出一个理想的地狱。</p>
           </div>
 
@@ -682,7 +705,11 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://www.baidu.com/" title="百度" target="_blank">百度</a>
+                    <a href="http://www.tensorflow.org/" title="TensorFlow" target="_blank">TensorFlow</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.numpy.org/" title="NumPy" target="_blank">NumPy</a>
                   </li>
                 
               </ul>
@@ -707,7 +734,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#提纲"><span class="nav-number">1.</span> <span class="nav-text">提纲</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线性分类"><span class="nav-number">1.1.</span> <span class="nav-text">线性分类</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#提纲"><span class="nav-number">1.</span> <span class="nav-text">提纲</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线性分类"><span class="nav-number">2.</span> <span class="nav-text">线性分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#理解线性分类器"><span class="nav-number">3.</span> <span class="nav-text">理解线性分类器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#将图像理解为高维空间中的点"><span class="nav-number">3.1.</span> <span class="nav-text">将图像理解为高维空间中的点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将线性分类器理解为template-matching"><span class="nav-number">3.2.</span> <span class="nav-text">将线性分类器理解为template matching</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图像数据的处理"><span class="nav-number">4.</span> <span class="nav-text">图像数据的处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Loss-function"><span class="nav-number">5.</span> <span class="nav-text">Loss function</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多类SVM-loss"><span class="nav-number">5.1.</span> <span class="nav-text">多类SVM loss</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Regularization"><span class="nav-number">5.2.</span> <span class="nav-text">Regularization</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -731,7 +758,7 @@
   <span class="with-love" id="animate"> 
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">翟宇</span>
+  <span class="author" itemprop="copyrightHolder">YWXKJTSD</span>
 
   
 
