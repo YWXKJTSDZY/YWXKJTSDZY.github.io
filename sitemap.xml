@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/01/20/Python-GUI-tkinter/</loc>
+    
+    <lastmod>2019-01-20T12:14:57.807Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/google816834f605efe970.html</loc>
     
     <lastmod>2019-01-20T11:34:34.885Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://yoursite.com/2018/04/26/linear-classification/</loc>
     
     <lastmod>2019-01-20T09:21:45.174Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/01/20/Python-GUI-tkinter/</loc>
-    
-    <lastmod>2019-01-20T09:19:09.696Z</lastmod>
     
   </url>
   

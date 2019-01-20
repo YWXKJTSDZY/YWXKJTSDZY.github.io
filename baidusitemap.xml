@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2019/01/20/Python-GUI-tkinter/</loc>
+    <lastmod>2019-01-20</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2018/05/15/How-to-install-Neper/</loc>
     <lastmod>2019-01-20</lastmod>
   </url>  <url>
@@ -8,9 +11,6 @@
     <lastmod>2019-01-20</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/04/26/linear-classification/</loc>
-    <lastmod>2019-01-20</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/01/20/Python-GUI-tkinter/</loc>
     <lastmod>2019-01-20</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/04/25/FCN/</loc>
