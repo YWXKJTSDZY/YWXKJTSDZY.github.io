@@ -131,22 +131,22 @@
 
 
 
-  <meta name="description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结  线性分类上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了K-最近邻分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），K-最近邻">
+  <meta name="description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结">
 <meta name="keywords" content="CNN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性分类器">
 <meta property="og:url" content="http://yoursite.com/2018/04/26/linear-classification/index.html">
 <meta property="og:site_name" content="YWXKJTSD">
-<meta property="og:description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结  线性分类上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了K-最近邻分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），K-最近邻">
+<meta property="og:description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2018/04/26/linear-classification/imagemap.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/04/26/linear-classification/pixelspace.jpeg">
 <meta property="og:image" content="http://yoursite.com/2018/04/26/linear-classification/templates.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/04/26/linear-classification/wb.jpeg">
-<meta property="og:updated_time" content="2018-04-28T15:41:34.744Z">
+<meta property="og:updated_time" content="2019-01-20T09:21:45.174Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性分类器">
-<meta name="twitter:description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结  线性分类上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了K-最近邻分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），K-最近邻">
+<meta name="twitter:description" content="提纲 线性分类介绍 线性score函数 理解线性分类器 损失函数 多类SVM Softmax分类器 SVM vs Softmax   总结">
 <meta name="twitter:image" content="http://yoursite.com/2018/04/26/linear-classification/imagemap.jpg">
 
 
@@ -391,8 +391,8 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2018-04-28T23:41:34+08:00" content="2018-04-28">
-      2018-04-28
+    <time itemprop="dateUpdated" datetime="2019-01-20T17:21:45+08:00" content="2019-01-20">
+      2019-01-20
     </time>
   </span>
 
@@ -454,11 +454,12 @@
 <li>SVM vs Softmax</li>
 </ul>
 </li>
-<li>总结</li>
-</ul>
+<li><p>总结</p>
+<a id="more"></a>
 <h1 id="线性分类"><a href="#线性分类" class="headerlink" title="线性分类"></a>线性分类</h1><p>上一节介绍了图片分类问题，即给定一张图片，判断图片的类别label（类别label数量有限）,然后介绍了<strong>K-最近邻</strong>分类器（将给定图片与训练集中的图片比较，找到与给定图片最接近的k张图片，这k张图片的label加权即为给定图片的label），<strong>K-最近邻</strong>分类器有几个缺点：</p>
-<ul>
-<li>必须存储所有的训练数据，耗费存储空间。</li>
+</li>
+<li><p>必须存储所有的训练数据，耗费存储空间。</p>
+</li>
 <li>测试数据必须与所有的训练数据比较，预测时非常耗时。</li>
 </ul>
 <p>我们将发展出一套更强大的图片分类方法，通过这个方法我们可以很自然的引入<strong>神经网络和卷积神经网络</strong>。这个方法由两部分组成：score function和loss function，score function将原始数据映射为其属于某一类的分数，loss function定量的刻画所预测的分数与ground truth labels之间的一致性。最后我们会得到一个优化问题：找到一组描述score function的参数,最小化loss function。</p>
