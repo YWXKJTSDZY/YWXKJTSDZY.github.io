@@ -145,12 +145,12 @@
 <meta property="og:site_name" content="YWXKJTSD">
 <meta property="og:description" content="根据裂纹扩展准则，如果某处的裂纹扩展量大于某一临界值，则裂纹从该处开裂。基于这一原则，如果将所关心的区域离散成规则网格，沿着每一层单元寻找裂纹扩展量最大的节点，将该节点作为可能萌生裂纹的位置。每一层都存在这样的节点，将找到的节点连接起来，就形成了可能的裂纹扩展路径。本文用多轴疲劳参数SWT来表示裂纹的开裂，先通过python脚本计算出所关心区域的SWT值，然后再找到每一层中SWT最大的节点，然后">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/01/20/method-of-crack-propagation-path-extraction/mesh.jpg">
-<meta property="og:updated_time" content="2019-01-20T14:24:23.340Z">
+<meta property="og:image" content="http://yoursite.com/2019/01/20/method-of-crack-propagation-path-extraction/mesh.JPG">
+<meta property="og:updated_time" content="2019-01-21T12:56:05.318Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="method of crack propagation path extraction">
 <meta name="twitter:description" content="根据裂纹扩展准则，如果某处的裂纹扩展量大于某一临界值，则裂纹从该处开裂。基于这一原则，如果将所关心的区域离散成规则网格，沿着每一层单元寻找裂纹扩展量最大的节点，将该节点作为可能萌生裂纹的位置。每一层都存在这样的节点，将找到的节点连接起来，就形成了可能的裂纹扩展路径。本文用多轴疲劳参数SWT来表示裂纹的开裂，先通过python脚本计算出所关心区域的SWT值，然后再找到每一层中SWT最大的节点，然后">
-<meta name="twitter:image" content="http://yoursite.com/2019/01/20/method-of-crack-propagation-path-extraction/mesh.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/20/method-of-crack-propagation-path-extraction/mesh.JPG">
 
 
 
@@ -394,8 +394,8 @@
           
   <span class="post-updated">
     &nbsp; | &nbsp; 更新于
-    <time itemprop="dateUpdated" datetime="2019-01-20T22:24:23+08:00" content="2019-01-20">
-      2019-01-20
+    <time itemprop="dateUpdated" datetime="2019-01-21T20:56:05+08:00" content="2019-01-21">
+      2019-01-21
     </time>
   </span>
 
@@ -452,8 +452,8 @@
 <ol>
 <li>用映射网格离散裂纹区域，为了避免绘制成的裂纹路径呈锯齿状，网格的单元尺寸应该尽可能小。</li>
 </ol>
-<p><img src="/2019/01/20/method-of-crack-propagation-path-extraction/mesh.jpg" alt="裂纹区网格"></p>
-<ol>
+<p><img src="/2019/01/20/method-of-crack-propagation-path-extraction/mesh.JPG" alt="裂纹区网格"></p>
+<ol start="2">
 <li>裂纹区的映射网格中，沿着每一层创建一条Abaqus路径，找到层与层之间路径的规律后，创建一条从第一层第一个节点出发依次经过每一层每个节点的路径，直到最后一个点，Abaqus中路径由点构成，点之间用英文逗号分隔，没有空格和换行。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">在Abaqus中创建路径，找到路径规律。</span></span><br><span class="line"><span class="string">从上到下第一层路径：24101:24341:1</span></span><br><span class="line"><span class="string">从左到右第一列路径：24101:242:-241, 1</span></span><br><span class="line"><span class="string">从左到右第二列路径：24102:243:-241, 2</span></span><br><span class="line"><span class="string">从左到右导数第二列路径：24340:481:-241, 240</span></span><br><span class="line"><span class="string">从左到右倒数第一列路径：24341:482:-241, 241</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_path</span><span class="params">()</span>:</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 
